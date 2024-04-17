@@ -7,6 +7,169 @@
 }
 
 .header-logo {
+  width: 100px;
+  display: flex;
+  margin-left: 50px;
+}
+
+.header-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header-nav li {
+  margin-right: 20px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+.interactions-container {
+  display: grid;
+  grid-template-columns: 3.5fr 1.5fr;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.interaction-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.advertisement {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 12px;
+  margin-bottom: 15px;
+  font-family: cursive;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating-button {
+  font-size: 3rem; /* Aumenta el tamaño de la fuente */
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0 10px; /* Aumenta el espacio entre los botones */
+}
+
+.rating-button:hover {
+  background-color: #f0f0f0;
+}
+
+.rating-button p {
+  margin-top: 10px; /* Aumenta el espacio entre la cara y el texto */
+  color: black;
+}
+
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #0a581b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.imagenes_publicidad {
+  display: flex;
+  justify-content: center;
+}
+
+.imagenes_publicidad img {
+  max-width: 60%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.Descubrir {
+  margin-top: 25px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-family: cursive;
+}
+.web{
+  background-color: #fff;
+
+}
+ .web img{
+  width: 30px;
+ }
+
+ .advertisement-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.advertisement-carousel {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.advertisement-carousel img {
+  width: 100%;
+  max-width: 400px; /* Ajusta el tamaño máximo de las imágenes */
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+
+
+/* .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.header-logo {
   width: 200px;
   display: flex;
   margin-left: 50px;
@@ -61,19 +224,20 @@ h2 {
 p {
   font-size: 1rem;
   margin-bottom: 15px;
+  font-family: cursive;
 }
 
 .rating-container {
   display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
-  margin-top: 10px; /* Añade espacio entre la sección de calificación y la publicidad */
+  justify-content: center; 
+  margin-top: 10px; 
 }
 
 .rating-button {
   font-size: 1.5rem;
   background-color: #fff;
   cursor: pointer;
-  margin: 0 5px; /* Espacio entre los botones */
+  margin: 0 5px; 
 }
 
 .rating-button:hover {
@@ -96,10 +260,6 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover,
-button:focus {
-  background-color: #0a581b;
-}
 
 .imagenes_publicidad {
   display: flex;
@@ -107,18 +267,12 @@ button:focus {
 }
 
 .imagenes_publicidad img {
-  max-width: 40%; /* Ajusta el tamaño máximo de la imagen */
-  height: auto; /* Ajusta automáticamente la altura según el ancho */
-  margin-right: 10px; /* Espacio entre las imágenes */
+  max-width: 30%; 
+  height: auto; 
+  margin-right: 10px; 
 }
 
-.web{
-  background-color: #fff;
 
-}
- .web img{
-  width: 30px;
- }
  .Descubrir{
 
   margin-top: 25px;
@@ -138,4 +292,5 @@ button:focus {
 .card p {
   font-size: 1rem;
   margin-bottom: 15px;
-}
+  font-family: cursive;
+} */

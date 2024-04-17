@@ -26,8 +26,47 @@ const Interactions = () => {
           </nav>
         </header>
       </div>
+  <div className="interactions-container">
+      <div className="interaction-section">
+      <div className="card">
+    <h2>Califica tu experiencia en La Gran Colombia</h2>
+    <p>¡Tu opinión es importante para nosotros! Por favor,  <br />selecciona una de las siguientes caras para calificar tu experiencia</p>
+    <div className="rating-container">
+      <button className="rating-button" onClick={() => handleInteractionClick('muy_bueno')} title="Muy Bueno">
+        😄 <p>Muy bueno</p>
+      </button>
+      <button className="rating-button" onClick={() => handleInteractionClick('bueno')} title="Bueno">
+        🙂 <p>Bueno</p>
+      </button>
+      <button className="rating-button" onClick={() => handleInteractionClick('neutral')} title="Neutral">
+        😐 <p>Neutral</p>
+      </button>
+      <button className="rating-button" onClick={() => handleInteractionClick('malo')} title="Malo">
+        😞 <p>Malo</p>
+      </button>
+      <button className="rating-button" onClick={() => handleInteractionClick('muy_malo')} title="Muy Malo">
+        😠 <p>Muy Malo</p>
+      </button>
+    </div>
+  </div>
+      </div>
 
-    <div className="interactions-container">
+      <div className="advertisement">
+        <h2>¡Descubre La Gran Colombia!</h2>
+        
+        <div className='imagenes_publicidad'>
+          <img src="https://media.discordapp.net/attachments/1101500368397029496/1230177795603169382/Imagen_de_WhatsApp_2024-04-17_a_las_08.55.06_f9e5071f.jpg?ex=66325f5a&is=661fea5a&hm=dbe765115a873dd9ac981fa2c50ff1266761119cb76320b35bdd7bbe2a701d87&=&format=webp&width=525&height=525" alt="" />
+
+    <img src="https://media.discordapp.net/attachments/1101500368397029496/1230177820685107220/Imagen_de_WhatsApp_2024-04-17_a_las_09.18.12_0bdc7ad0.jpg?ex=66325f60&is=661fea60&hm=2980ccb2eaf44ad2c297ec109825e468d0783a4921f7f1f7932772c863ac913e&=&format=webp&width=549&height=549" alt="" />
+    
+
+        </div>
+        <a href="https://www.ugc.edu.co/" target="_blank" rel="noopener noreferrer">
+          <button className='Descubrir'>Descubrir</button>
+        </a>
+      </div>
+    </div>
+    {/* <div className="interactions-container">
     
     <div className="interaction-section">
   <div className="card">
@@ -57,8 +96,10 @@ const Interactions = () => {
   <h2>¡Descubre La Gran Colombia!</h2>
   <p>Conoce más sobre nuestra universidad líder en educación e innovación. En La Gran Colombia, ofrecemos una amplia variedad de programas académicos de alta calidad que preparan a nuestros estudiantes para enfrentar los desafíos del mundo actual. Desde carreras en ciencias, tecnología, ingeniería y matemáticas (STEM) hasta artes, humanidades y negocios, tenemos algo para todos los intereses.</p>
   <div className='imagenes_publicidad'>
-    <img src="https://media.discordapp.net/attachments/1101500368397029496/1230177795603169382/Imagen_de_WhatsApp_2024-04-17_a_las_08.55.06_f9e5071f.jpg?ex=66325f5a&is=661fea5a&hm=dbe765115a873dd9ac981fa2c50ff1266761119cb76320b35bdd7bbe2a701d87&=&format=webp&width=525&height=525" alt="" />
+    <img src="https://media.discordapp.net/attachments/1101500368397029496/1230177795603169382/Imagen_de_WhatsApp_2024-04-17_a_las_08.55.06_f9e5071f.jpg?ex=66325f5a&is=661fea5a&hm=dbe765115a873dd9ac981fa2c50ff1266761119cb76320b35bdd7bbe2a701d87&=&format=webp&width=525&height=525" alt="" /> 
+
     <img src="https://media.discordapp.net/attachments/1101500368397029496/1230177820685107220/Imagen_de_WhatsApp_2024-04-17_a_las_09.18.12_0bdc7ad0.jpg?ex=66325f60&is=661fea60&hm=2980ccb2eaf44ad2c297ec109825e468d0783a4921f7f1f7932772c863ac913e&=&format=webp&width=549&height=549" alt="" />
+
     <img src="https://media.discordapp.net/attachments/1101500368397029496/1230183906506965093/image.png?ex=6632650b&is=661ff00b&hm=22391d3d97c9dc7a27b9a69e0ceca98013f669765dbbc92e65a8ae7f02406a65&=&format=webp&quality=lossless&width=825&height=493" alt="" />
   </div>
   <a href="https://www.ugc.edu.co/" target="_blank" rel="noopener noreferrer">
@@ -67,7 +108,7 @@ const Interactions = () => {
 </div>
 
 
-    </div>
+    </div> */}
     </section>
 
   );
