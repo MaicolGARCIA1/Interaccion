@@ -1,12 +1,18 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import './Interactions.css';
 
 const Interactions = () => {
-  // Función para manejar la interacción de clic en las caras
-  const handleInteractionClick = (rating) => {
-    // Aquí podrías realizar alguna acción basada en la calificación seleccionada
-    console.log('Calificación:', rating);
+    const handleInteractionClick = (rating) => {
+      // Mostrar el modal SweetAlert2
+      Swal.fire({
+        title: '¡Gracias por tu calificación!',
+        text: `Calificación seleccionada: ${rating}`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      });
   };
+  
 
   return (
   <section>
