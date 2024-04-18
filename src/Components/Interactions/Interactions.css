@@ -34,7 +34,7 @@
 
 .interactions-container {
   display: grid;
-  grid-template-columns: 3.5fr 1.5fr;
+  grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
   gap: 10px;
   max-width: 1000px;
   margin: 0 auto;
@@ -125,7 +125,13 @@ button {
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
+  background-color: #0a581b; 
+  color: #ffffff; 
+  padding: 10px;
+  border-radius: 5px; 
+  text-align: center; 
 }
+
 
 .card p {
   font-size: 1rem;
@@ -151,16 +157,33 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   color: #fff;
   font-size: 1em;
 }
-/* Estilos para el carrusel de imágenes */
 .carousel {
   display: flex; /* Mostrar las imágenes en una fila */
-  transition: transform 0.5s ease; /* Agregar una transición suave al cambiar las imágenes */
+  justify-content: center; /* Centrar las imágenes horizontalmente */
+  overflow: hidden; /* Ocultar cualquier contenido que se desborde del contenedor */
 }
 
-/* Estilos para las imágenes individuales */
 .carousel img {
-  width: 100%; /* Ajustar el ancho de las imágenes al 100% del contenedor */
+  max-width: 110%; /* Ajustar el ancho máximo de las imágenes al 100% del contenedor */
   height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+  max-height: 400px; /* Establecer una altura máxima para las imágenes */
+}
+
+
+/* Utiliza media queries para ajustar el diseño en pantallas más pequeñas */
+@media screen and (min-width: 768px) {
+  .interactions-container {
+    grid-template-columns: 3.5fr 1.5fr; /* Vuelve al diseño de dos columnas en pantallas más grandes */
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .historial-button {
+    font-size: 0.8rem; /* Ajusta el tamaño del botón en pantallas más pequeñas */
+    padding: 8px 16px; /* Ajusta el padding del botón en pantallas más pequeñas */
+  }
 }
 
 /* .header {
