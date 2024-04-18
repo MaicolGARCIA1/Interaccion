@@ -97,15 +97,19 @@ button {
 }
 
 .imagenes_publicidad {
-  display: flex;
-  justify-content: center;
+  display: block; /* Cambia el display a block para que las imágenes se muestren una debajo de la otra */
+  text-align: center; /* Centra las imágenes horizontalmente en el contenedor */
+  max-width: 100%; /* Ajusta el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 .imagenes_publicidad img {
-  max-width: 60%;
-  height: 250px;
-  margin-right: 10px;
+  max-width: 60%; /* Ajusta el tamaño máximo de la imagen */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  margin-bottom: 20px; /* Agrega un espacio entre cada imagen */
 }
+
+
 
 .Descubrir {
   margin-top: 25px;
@@ -136,28 +140,8 @@ button {
   width: 30px;
  }
 
- .advertisement-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  margin: 20px;
-}
 
-.advertisement-carousel {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  overflow: hidden;
-}
 
-.advertisement-carousel img {
-  width: 100%;
-  max-width: 400px; /* Ajusta el tamaño máximo de las imágenes */
-  height: auto;
-  transition: transform 0.5s ease;
-}
 
 div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   border: 0;
@@ -166,6 +150,17 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   background-color: green;
   color: #fff;
   font-size: 1em;
+}
+/* Estilos para el carrusel de imágenes */
+.carousel {
+  display: flex; /* Mostrar las imágenes en una fila */
+  transition: transform 0.5s ease; /* Agregar una transición suave al cambiar las imágenes */
+}
+
+/* Estilos para las imágenes individuales */
+.carousel img {
+  width: 100%; /* Ajustar el ancho de las imágenes al 100% del contenedor */
+  height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
 }
 
 /* .header {
