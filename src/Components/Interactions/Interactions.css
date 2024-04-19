@@ -1,9 +1,11 @@
+
+/* Estilos para el encabezado */
 .header {
+  background-color: rgb(247, 247, 247);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  color: rgb(0, 0, 0);
 }
 
 .header-logo {
@@ -25,13 +27,11 @@
 
 .header-nav a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
 }
 
-.header-nav a:hover {
-  text-decoration: underline;
-}
 
+
+/* Estilos para el contenedor de interacciones */
 .interactions-container {
   display: grid;
   grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
@@ -41,27 +41,19 @@
   padding: 20px;
 }
 
+/* Estilos para las tarjetas de interacción */
 .interaction-section {
   padding: 20px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregar transiciones */
 }
 
-.advertisement {
-  padding: 20px;
-  text-align: center;
+/* Efecto hover para las tarjetas de interacción */
+.interaction-section:hover {
+  transform: scale(1.05);
 }
 
-h2 {
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 12px;
-  margin-bottom: 15px;
-  font-family: cursive;
-}
-
+/* Estilos para los botones de calificación */
 .rating-container {
   display: flex;
   justify-content: center;
@@ -69,23 +61,23 @@ p {
 }
 
 .rating-button {
-  font-size: 3rem; /* Aumenta el tamaño de la fuente */
+  font-size: 3rem;
   background-color: #fff;
   cursor: pointer;
-  margin: 0 10px; /* Aumenta el espacio entre los botones */
+  margin: 0 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Agregar transiciones */
+  border: none; /* Eliminar el borde */
+  outline: none; /* Eliminar el borde al hacer clic */
 }
 
+/* Efecto hover para los botones de calificación */
 .rating-button:hover {
   background-color: #f0f0f0;
+  transform: scale(1.1);
 }
 
-.rating-button p {
-  margin-top: 10px; /* Aumenta el espacio entre la cara y el texto */
-  color: black;
-}
-
-
-button {
+/* Estilos para los botones generales */
+.button {
   font-size: 1rem;
   padding: 10px 20px;
   background-color: #0a581b;
@@ -93,28 +85,55 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregar transiciones */
 }
 
+/* Efecto hover para los botones generales */
+.button:hover {
+  transform: translateY(-3px);
+}
+
+
+/* Estilos para el carrusel */
+.carousel {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel img {
+  max-width: 110%;
+  height: auto;
+  max-height: 400px;
+  transition: transform 0.5s ease; /* Agregar transición al carrusel */
+}
+
+/* Efecto hover para las imágenes del carrusel */
+.carousel img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para la publicidad */
+.advertisement {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para las imágenes de publicidad */
 .imagenes_publicidad {
-  display: block; /* Cambia el display a block para que las imágenes se muestren una debajo de la otra */
-  text-align: center; /* Centra las imágenes horizontalmente en el contenedor */
-  max-width: 100%; /* Ajusta el ancho máximo del contenedor */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: block;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .imagenes_publicidad img {
-  max-width: 60%; /* Ajusta el tamaño máximo de la imagen */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-  margin-bottom: 20px; /* Agrega un espacio entre cada imagen */
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-
-
-.Descubrir {
-  margin-top: 25px;
-}
-
+/* Estilos para las tarjetas */
 .card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -125,30 +144,30 @@ button {
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  background-color: #0a581b; 
-  color: #ffffff; 
+  background-color: #0a581b;
+  color: #ffffff;
   padding: 10px;
-  border-radius: 5px; 
-  text-align: center; 
+  border-radius: 5px;
+  text-align: center;
 }
-
 
 .card p {
   font-size: 1rem;
   margin-bottom: 15px;
   font-family: cursive;
 }
-.web{
+
+/* Estilos para la sección web */
+.web {
   background-color: #fff;
-
+  border: #ffffff;
 }
- .web img{
+
+.web img {
   width: 30px;
- }
+}
 
-
-
-
+/* Estilos para los botones de alerta */
 div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   border: 0;
   border-radius: 0.25em;
@@ -157,18 +176,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   color: #fff;
   font-size: 1em;
 }
-.carousel {
-  display: flex; /* Mostrar las imágenes en una fila */
-  justify-content: center; /* Centrar las imágenes horizontalmente */
-  overflow: hidden; /* Ocultar cualquier contenido que se desborde del contenedor */
-}
-
-.carousel img {
-  max-width: 110%; /* Ajustar el ancho máximo de las imágenes al 100% del contenedor */
-  height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
-  max-height: 400px; /* Establecer una altura máxima para las imágenes */
-}
-
 
 /* Utiliza media queries para ajustar el diseño en pantallas más pequeñas */
 @media screen and (min-width: 768px) {
@@ -177,145 +184,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
   .historial-button {
     font-size: 0.8rem; /* Ajusta el tamaño del botón en pantallas más pequeñas */
     padding: 8px 16px; /* Ajusta el padding del botón en pantallas más pequeñas */
   }
 }
-
-/* .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  color: rgb(0, 0, 0);
-}
-
-.header-logo {
-  width: 200px;
-  display: flex;
-  margin-left: 50px;
-}
-
-.header-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.header-nav li {
-  margin-right: 20px;
-}
-
-.header-nav a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
-.header-nav a:hover {
-  text-decoration: underline;
-}
-
-
-.interactions-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.interaction-section {
-  padding: 20px;
-  text-align: center;
-}
-
-.advertisement {
-  margin-top: 20px;
-  padding: 20px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  font-family: cursive;
-}
-
-.rating-container {
-  display: flex;
-  justify-content: center; 
-  margin-top: 10px; 
-}
-
-.rating-button {
-  font-size: 1.5rem;
-  background-color: #fff;
-  cursor: pointer;
-  margin: 0 5px; 
-}
-
-.rating-button:hover {
-  background-color: #f0f0f0;
-}
-
-.rating-button p {
-  margin-top: 5px;
-  color: black;
-}
-
-button {
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: #0a581b;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
-.imagenes_publicidad {
-  display: flex;
-  justify-content: center;
-}
-
-.imagenes_publicidad img {
-  max-width: 30%; 
-  height: auto; 
-  margin-right: 10px; 
-}
-
-
- .Descubrir{
-
-  margin-top: 25px;
- }
- .card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.card p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  font-family: cursive;
-} */
