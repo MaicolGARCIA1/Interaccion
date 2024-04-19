@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
-import './Interactions.css';
+import './Norte.css';
 
-const Interactions = () => {
+const Norte = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [ratingsHistory, setRatingsHistory] = useState([]);
 
@@ -64,15 +64,6 @@ const Interactions = () => {
 
   return (
     <section>
-  <header className="header">
-          <img className='header-logo' src="https://media.discordapp.net/attachments/1101500368397029496/1231006226280878081/Imagen_de_WhatsApp_2024-04-19_a_las_16.29.08_28e1b83e.jpg?ex=663562e3&is=6622ede3&hm=1ea062dfa7e82a64c2f16fa35fd2349ffb77689d924926f998a62dbfb8cfb8b3&=&format=webp&width=1012&height=345" alt="" />
-          <nav className="header-nav">
-             <ul>
-              <button className='web'><img src="https://cdn-icons-png.flaticon.com/128/558/558593.png" alt="" /> </button>
-             </ul>
-          </nav>        </header>
-
-
       <div className="interactions-container">
         <div className="interaction-section">
           <div className="card">
@@ -109,4 +100,4 @@ const Interactions = () => {
   );
 };
 
-export default Interactions;
+export default Norte;
