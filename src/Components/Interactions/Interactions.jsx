@@ -20,11 +20,20 @@ const Interactions = () => {
 
     return () => clearInterval(interval);
   }, [images.length]);
-
   const handleInteractionClick = (rating) => {
-    saveRating(rating);
-  };
+  // Ajusta los valores de rating si es necesario para que coincidan con los esperados en el backend
+  if (rating === 'muy_bueno') {
+    rating = 'muy bueno';
+  } else if (rating === 'muy_malo') {
+    rating = 'muy malo';
+  }
+  saveRating(rating);
+};
 
+
+  // const handleInteractionClick = (rating) => {
+  //   saveRating(rating);
+  // };
   const saveRating = async (rating) => {
     const estudiante = {
       id_estudiante: 1,
@@ -32,7 +41,7 @@ const Interactions = () => {
       comentario: "Muy buena clase",
       calificacion: rating
     };
-
+  
     try {
       const response = await fetch('http://localhost:5000/interactions/save-rating', {
         method: 'POST',
@@ -47,7 +56,7 @@ const Interactions = () => {
       setRatingsHistory(prevHistory => [...prevHistory, rating]);
       Swal.fire({
         title: '¡Gracias por tu calificación!',
-        text: `Calificación seleccionada: ${rating}`,
+        text: `Tu calificación ha sido aceptada. ¡Gracias por tu participación!`,
         icon: 'success',
         confirmButtonText: 'Aceptar'
       });
@@ -55,6 +64,38 @@ const Interactions = () => {
       console.error('Error saving rating:', error);
     }
   };
+  
+
+  // const saveRating = async (rating) => {
+  //   const estudiante = {
+  //     id_estudiante: 1,
+  //     tipo_interaccion: "Clase",
+  //     comentario: "Muy buena clase",
+  //     calificacion: rating
+  //   };
+
+  //   try {
+  //     const response = await fetch('http://localhost:5000/interactions/save-rating', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(estudiante)
+  //     });
+  //     if (!response.ok) {
+  //       throw new Error('Error saving rating');
+  //     }
+  //     setRatingsHistory(prevHistory => [...prevHistory, rating]);
+  //     Swal.fire({
+  //       title: '¡Gracias por tu calificación!',
+  //       text: `Calificación seleccionada: ${rating}`,
+  //       icon: 'success',
+  //       confirmButtonText: 'Aceptar'
+  //     });
+  //   } catch (error) {
+  //     console.error('Error saving rating:', error);
+  //   }
+  // };
 
   return (
     <section className="interactions-section">
@@ -97,6 +138,7 @@ const Interactions = () => {
             <img src={images[currentImageIndex]} alt={`Imagen ${currentImageIndex + 1}`} />
           </div>
         </div>
+        
       </div>
     </section>
   );
