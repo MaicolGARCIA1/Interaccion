@@ -1,11 +1,26 @@
 
-/* Estilos para el encabezado */
+body{
+  background-image: url('../Imagenes/Low\ Poly.png');
+}/* .interactions-container {
+  background-image: url('https://media.discordapp.net/attachments/1101500368397029496/1232094827584295102/Low_poly_1-removebg-preview.png?ex=662986ba&is=6628353a&hm=31123377fa8bbc7364ce21a0a4f16dd0143668905086f874bbe8ade42ef818bc&=&format=webp&quality=lossless&width=825&height=465'), 
+                    url('https://p.turbosquid.com/ts-thumb/Dh/ksWcy8/IR/prev/png/1688133541/600x600/fit_q87/fdcad4a190f80b34c6d61fd59aa2c73787232e3b/prev.jpg'), 
+                    url('https://th.bing.com/th/id/OIP.tFjZEHeZ6vYE6Sb1IUjSAAHaEm?w=234&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');
+  background-size: 250px; 
+  background-repeat: no-repeat;
+  background-position: 
+    10% 95%, 
+    40% 95%, 
+    70% 95%; 
+} */
+
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: white;
+  background-color: #ffffff;
+
 }
 
 .header-logo {
@@ -30,38 +45,17 @@
 }
 
 
-.interactions-container {
-  background-image: url('https://th.bing.com/th/id/OIP.tXOLEnzOR2jIeUXoNAeiIgHaHa?w=170&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'), 
-                    url('https://th.bing.com/th/id/OIP.pKsTBYuJlR_EWMljMCuBSgHaEm?w=273&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'), 
-                    /* url('https://th.bing.com/th/id/OIP.HzhWpfj45auNWBYkq6S0vwHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'),  */
-                    url('https://th.bing.com/th/id/OIP.b-_EXo3YH8Fp83REeyPj8wHaHa?w=205&h=205&c=7&r=0&o=5&dpr=1.5&pid=1.7');
-  /* Ajusta el tamaño de las imágenes */
-  background-size: 80px; /* Tamaño de las imágenes en píxeles */
-  background-repeat: no-repeat;
-  /* Ajusta la posición de cada imagen para que se distribuyan */
-  background-position: 
-    10% 95%, /* posición de la primera imagen */
-    30% 95%, /* posición de la segunda imagen */
-    50% 90%, 
-    70% 60%; /* posición de la cuarta imagen */
-}
 
 
-/* .interactions-container {
-  background-image: url('https://th.bing.com/th/id/OIP.tXOLEnzOR2jIeUXoNAeiIgHaHa?w=170&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'), 
-                    url('https://th.bing.com/th/id/OIP.b-_EXo3YH8Fp83REeyPj8wHaHa?w=205&h=205&c=7&r=0&o=5&dpr=1.5&pid=1.7');
-  background-size: auto; 
-  background-position: center bottom;
-  background-repeat: no-repeat; 
-}
- */
+
+
 
 
 /* Estilos para el contenedor de interacciones */
 .interactions-container {
   display: grid;
   grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
-  gap: 10px;
+  gap: 70px;
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
@@ -74,10 +68,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregar transiciones */
 }
 
-/* Efecto hover para las tarjetas de interacción */
-.interaction-section:hover {
-  transform: scale(1.05);
-}
+
 
 /* Estilos para los botones de calificación */
 .rating-container {
@@ -87,22 +78,33 @@
 }
 
 .rating-button {
-  font-size: 3rem;
+  font-size: 1rem; /* Reduje el tamaño de la fuente para que quepa mejor */
   background-color: #fff;
   cursor: pointer;
-  margin: 0 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Agregar transiciones */
-  border: none; /* Eliminar el borde */
-  border-radius: 15px;
-  outline: none; /* Eliminar el borde al hacer clic */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+  margin: 0 10px;  border: none;
+  outline: none;
+  width: 120px; /* Ajusté el ancho para dar más espacio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Efecto hover para los botones de calificación */
 .rating-button:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.1);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Aumentar la sombra al hacer hover */
+  background-color: #f0f0f0; /* Cambiamos el color de fondo a un tono más claro */
+  transform: scale(1.05); /* Aumentamos ligeramente la escala */
+}
+
+
+/* Estilos para las imágenes dentro de los botones */
+.rating-button img {
+  width: 80px; /* Ajusté el ancho de las imágenes */
+  height: auto; /* Mantuve la relación de aspecto */
+}
+
+/* Estilos para los textos dentro de los botones */
+.rating-button p {
+  margin-top: 5px; /* Espacio entre la imagen y el texto */
 }
 
 
@@ -116,14 +118,36 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregar transiciones */
 }
 
-/* Efecto hover para los botones generales */
-.button:hover {
-  transform: translateY(-3px);
+
+
+
+/* Estilos para las tarjetas */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px;
 }
 
+
+.card h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: #0a581b;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-family: cursive;
+}
 
 /* Estilos para el carrusel */
 .carousel {
@@ -133,16 +157,11 @@
 }
 
 .carousel img {
-  max-width: 110%;
-  height: auto;
-  max-height: 400px;
+  width: 300px;
+  height: 350px;
   transition: transform 0.5s ease; /* Agregar transición al carrusel */
 }
 
-/* Efecto hover para las imágenes del carrusel */
-.carousel img:hover {
-  transform: scale(1.1);
-}
 
 /* Estilos para la publicidad */
 .advertisement {
@@ -164,29 +183,6 @@
   margin-bottom: 20px;
 }
 
-/* Estilos para las tarjetas */
-.card {
-  background-color: #ffffff; 
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  background-color: #0a581b;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.card p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  font-family: cursive;
-}
 
 /* Estilos para la sección web */
 .web {
@@ -207,6 +203,30 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   color: #fff;
   font-size: 1em;
 }
+.card1 {
+  background-color: #ffffff; 
+  border-radius: 10px;
+  margin-left: -40px; /* Ajuste del margen izquierdo */
+}
+
+
+.card1 h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: #0a581b;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.card1 p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-family: cursive;
+}
+
 
 /* Utiliza media queries para ajustar el diseño en pantallas más pequeñas */
 @media screen and (min-width: 768px) {
