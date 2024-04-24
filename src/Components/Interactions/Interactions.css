@@ -1,137 +1,94 @@
 
-body{
+body {
   background-image: url('../Imagenes/Low\ Poly.png');
-}/* .interactions-container {
-  background-image: url('https://media.discordapp.net/attachments/1101500368397029496/1232094827584295102/Low_poly_1-removebg-preview.png?ex=662986ba&is=6628353a&hm=31123377fa8bbc7364ce21a0a4f16dd0143668905086f874bbe8ade42ef818bc&=&format=webp&quality=lossless&width=825&height=465'), 
-                    url('https://p.turbosquid.com/ts-thumb/Dh/ksWcy8/IR/prev/png/1688133541/600x600/fit_q87/fdcad4a190f80b34c6d61fd59aa2c73787232e3b/prev.jpg'), 
-                    url('https://th.bing.com/th/id/OIP.tFjZEHeZ6vYE6Sb1IUjSAAHaEm?w=234&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');
-  background-size: 250px; 
-  background-repeat: no-repeat;
-  background-position: 
-    10% 95%, 
-    40% 95%, 
-    70% 95%; 
-} */
+  margin: 0; /* Asegurar que no haya espacios en blanco */
+  padding: 0; /* Asegurar que no haya espacios en blanco */
+}
 
-
+/* Estilos de la cabecera */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   background-color: #ffffff;
-
 }
 
+/* Logo de la cabecera */
 .header-logo {
   width: 120px;
-  display: flex;
-  margin-left: 50px;
-}
-
-.header-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.header-nav li {
-  margin-right: 20px;
-}
-
-.header-nav a {
-  text-decoration: none;
+  margin-left: 20px; /* Ajustar el margen izquierdo */
 }
 
 
 
 
-
-
-
-
-/* Estilos para el contenedor de interacciones */
+/* Contenedor de interacciones */
 .interactions-container {
   display: grid;
   grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
-  gap: 70px;
+  gap: 20px; /* Reducir el espacio entre las tarjetas */
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Estilos para las tarjetas de interacción */
+/* Sección de interacción */
 .interaction-section {
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregar transiciones */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
-/* Estilos para los botones de calificación */
+/* Contenedor de calificación */
 .rating-container {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  overflow-x: auto; /* Habilitar el desplazamiento horizontal si los botones exceden el ancho del contenedor */
+  overflow-y: hidden; /* Ocultar el desplazamiento vertical */
+  white-space: nowrap; /* Evitar que los elementos se envuelvan en múltiples líneas */
 }
 
+/* Botón de calificación */
 .rating-button {
-  font-size: 1rem; /* Reduje el tamaño de la fuente para que quepa mejor */
+  font-size: 1rem;
   background-color: #fff;
   cursor: pointer;
-  margin: 0 10px;  border: none;
+  margin: 10px; /* Espacio entre los botones */
+  border: none;
   outline: none;
-  width: 120px; /* Ajusté el ancho para dar más espacio */
+  width: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Efecto hover para los botones de calificación */
+/* Efecto hover para el botón de calificación */
 .rating-button:hover {
-  background-color: #f0f0f0; /* Cambiamos el color de fondo a un tono más claro */
-  transform: scale(1.05); /* Aumentamos ligeramente la escala */
+  background-color: transparent;
+  transform: scale(1.05);
 }
 
-
-/* Estilos para las imágenes dentro de los botones */
+/* Imagen dentro del botón de calificación */
 .rating-button img {
-  width: 80px; /* Ajusté el ancho de las imágenes */
-  height: auto; /* Mantuve la relación de aspecto */
+  width: 80px;
+  height: auto;
 }
 
-/* Estilos para los textos dentro de los botones */
+/* Texto dentro del botón de calificación */
 .rating-button p {
-  margin-top: 5px; /* Espacio entre la imagen y el texto */
+  margin-top: 5px;
 }
 
-
-
-/* Estilos para los botones generales */
-.button {
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: #0a581b;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-
-
-/* Estilos para las tarjetas */
 .card {
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  height: 400px;
+  width: 110%; /* Ancho del 95% del contenedor padre */
+  max-width: 600px; /* Ancho máximo */
+  margin-top: -0px;
+  margin-left: 30px;
 }
-
-
+/* Título de la tarjeta */
 .card h2 {
   font-size: 1rem;
   margin-bottom: 15px;
@@ -140,61 +97,32 @@ body{
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
+/* Párrafo de la tarjeta */
 .card p {
   font-size: 1rem;
   margin-bottom: 15px;
   font-family: cursive;
 }
 
-/* Estilos para el carrusel */
+/* Carrusel */
 .carousel {
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
 
+/* Imagen dentro del carrusel */
 .carousel img {
   width: 300px;
-  height: 350px;
-  transition: transform 0.5s ease; /* Agregar transición al carrusel */
+  height: 410px;
+  border-radius: 5px;
 }
 
 
-/* Estilos para la publicidad */
-.advertisement {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Estilos para las imágenes de publicidad */
-.imagenes_publicidad {
-  display: block;
-  text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.imagenes_publicidad img {
-  max-width: 60%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-
-/* Estilos para la sección web */
-.web {
-  background-color: #fff;
-  border: #ffffff;
-}
-
-.web img {
-  width: 30px;
-}
-
-/* Estilos para los botones de alerta */
+/* Botón de alerta */
 div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   border: 0;
   border-radius: 0.25em;
@@ -203,12 +131,14 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   color: #fff;
   font-size: 1em;
 }
-.card1 {
-  background-color: #ffffff; 
-  border-radius: 10px;
-  margin-left: -40px; /* Ajuste del margen izquierdo */
-}
 
+/* Tarjeta 1 */
+.card1 {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-left: -40px;
+  
+}
 
 .card1 h2 {
   font-size: 1rem;
@@ -227,17 +157,57 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   font-family: cursive;
 }
 
-
-/* Utiliza media queries para ajustar el diseño en pantallas más pequeñas */
+/* Media query para pantallas más grandes */
 @media screen and (min-width: 768px) {
   .interactions-container {
-    grid-template-columns: 3.5fr 1.5fr; /* Vuelve al diseño de dos columnas en pantallas más grandes */
+    grid-template-columns: repeat(2, 2fr); /* Cambia a dos columnas en pantallas más grandes */
+    gap: 40px; /* Aumenta el espacio entre las tarjetas */
+  }
+
+  .header-logo {
+    margin-left: 50px; /* Ajustar el margen izquierdo */
   }
 }
 
+/* Media query para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
-  .historial-button {
-    font-size: 0.8rem; /* Ajusta el tamaño del botón en pantallas más pequeñas */
-    padding: 8px 16px; /* Ajusta el padding del botón en pantallas más pequeñas */
+  /* Cambiar la dirección de flexión a columna */
+  .rating-container {
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos */
+  }
+}
+
+/* Media query para ajustar el tamaño en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .card1{
+   margin-left: 20px;
+  }
+  .card {
+    width: 95%; /* Reducir el ancho en pantallas más pequeñas */
+  }
+
+  .card img {
+    width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantener la relación de aspecto */
+  }
+}
+
+
+/* Media query para pantallas entre 768px y 1000px */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .header {
+    padding: 20px 30px; /* Ajustar el padding del encabezado */
+  }
+
+  .header-logo {
+    width: 120px; /* Mantener el tamaño del logo */
+    margin-left: 20px; /* Ajustar el margen izquierdo */
+  }
+
+  .interactions-container {
+    grid-template-columns: repeat(2, 1fr); /* Cambiar a dos columnas */
+    gap: 20px; /* Ajustar el espacio entre las tarjetas */
+    max-width: 90%; /* Limitar el ancho del contenedor */
   }
 }

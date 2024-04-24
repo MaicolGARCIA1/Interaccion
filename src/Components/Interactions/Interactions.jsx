@@ -16,7 +16,7 @@ const Interactions = () => {
       setCurrentImageIndex(prevIndex =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -59,7 +59,12 @@ const Interactions = () => {
         title: '¡Gracias por tu calificación!',
         text: `Tu calificación ha sido aceptada. ¡Gracias por tu participación!`,
         icon: 'success',
-        confirmButtonText: 'Aceptar'
+        confirmButtonText: 'Aceptar',
+        timer: 3000, // Tiempo en milisegundos (en este caso, 3 segundos)
+        timerProgressBar: true, // Muestra una barra de progreso para el temporizador
+        onClose: () => { // Función que se ejecuta cuando se cierra la alerta
+          // Coloca aquí cualquier código adicional que desees ejecutar después de que se cierre la alerta
+        }
       });
     } catch (error) {
       console.error('Error saving rating:', error);
@@ -68,14 +73,12 @@ const Interactions = () => {
 
   return (
     <section className="interactions-section">
+      <div className='Encabezado'>
       <header className="header">
         <img className='header-logo' src="https://media.discordapp.net/attachments/1101500368397029496/1231006226280878081/Imagen_de_WhatsApp_2024-04-19_a_las_16.29.08_28e1b83e.jpg?ex=663562e3&is=6622ede3&hm=1ea062dfa7e82a64c2f16fa35fd2349ffb77689d924926f998a62dbfb8cfb8b3&=&format=webp&width=1012&height=345" alt="" />
-        <nav className="header-nav">
-          <ul>
-            <button className='web'><img src="https://cdn-icons-png.flaticon.com/128/558/558593.png" alt="" /> </button>
-          </ul>
-        </nav>
+      
       </header>
+      </div>
 
       <div className="interactions-container">
         <div className="interaction-section">
@@ -86,25 +89,24 @@ const Interactions = () => {
 
             <div className="rating-container">
               <button className="rating-button" onClick={() => handleInteractionClick('muy_bueno')} title="Muy Bueno">
-                 <img src="https://media.discordapp.net/attachments/1101500368397029496/1232364145333243984/winksombra.png?ex=6629300c&is=6627de8c&hm=f2895d826763dba7025163c9ec513378b9e9ee5ba2b744059517adbc1118e625&=&format=webp&quality=lossless&width=525&height=525" alt="" /><p>Muy bueno</p>
+                 <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054596882504/muy_bueno.png?ex=662ac24b&is=662970cb&hm=094d4395dac2b63418bd1e8fc9a4973bc2105df4582779e6912fb68cb33bf1f0&=&format=webp&quality=lossless&width=547&height=549" alt="" /><p>Muy bueno</p>
               </button>
               <button className="rating-button" onClick={() => handleInteractionClick('bueno')} title="Bueno">
-                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232361993726459995/happysombra.png?ex=66292e0b&is=6627dc8b&hm=a2b42b3f10eb40b55de29898cb75d449ff8331952ddc0359457341dc73bfc655&=&format=webp&quality=lossless&width=525&height=525" alt="" /> <p>Bueno</p>
+                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054018195476/bueno.png?ex=662ac24b&is=662970cb&hm=8d17b3c5106cd9eaf5ec4fc720603b3df22b8d6cea6e4d4e0e303864121e281e&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Bueno</p>
               </button>
               <button className="rating-button" onClick={() => handleInteractionClick('neutral')} title="Neutral">
-                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232362655151292566/confusedsombra.png?ex=66292ea9&is=6627dd29&hm=313ed0a57ca603258acad3931c645e969ed2d9a108f78e85687b2d8a5d0a367c&=&format=webp&quality=lossless&width=525&height=525" alt="" /> <p>Neutral</p>
+                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054840410154/neutral.png?ex=662ac24b&is=662970cb&hm=35a0dc6bf3495dfc647076eedee91d35944543ea5653ad9bcd6a5f9545379a9f&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Neutral</p>
               </button>
               <button className="rating-button" onClick={() => handleInteractionClick('malo')} title="Malo">
-                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232364704190566440/sadsombra1.png?ex=66293091&is=6627df11&hm=71aecb88be32487e14f6e7b8e7491bfbda0f12ccb7a5870d642714cbb5c1e5f2&=&format=webp&quality=lossless&width=525&height=525" alt="" /><p>Malo</p>
+                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=662ac24b&is=662970cb&hm=8386b6c04af0fba5063cd91a4355cc613c3977bfb5bececf05abf0c86d21c63d&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p>Malo</p>
               </button>
               <button className="rating-button" onClick={() => handleInteractionClick('muy_malo')} title="Muy Malo">
-                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232363221311295488/angrysombra.png?ex=66292f30&is=6627ddb0&hm=3913bc7e1a5eb2f2f136989a270ed55cc63025913d7bd59f5b3395d5aa594b07&=&format=webp&quality=lossless&width=525&height=525" alt="" /> <p>Muy Malo</p>
+                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=662ac107&is=66296f87&hm=95187695002c3357267c2fa08afb9b2ec22eb8f67c8020284fc2e2fb1ce7b48d&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Muy Malo</p>
               </button>
             </div>
           </div>
         </div>
         <div className="card">
-          <h2>¡Descubre La Gran Colombia!</h2>
           <div className='carousel'>
             <img src={images[currentImageIndex]} alt={`Imagen ${currentImageIndex + 1}`} />
           </div>
