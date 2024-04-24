@@ -39,11 +39,12 @@ const Interactions = () => {
       id_estudiante: 1,
       tipo_interaccion: "Clase",
       comentario: "Muy buena clase",
-      calificacion: rating
+      calificacion: rating,
+      sede: "Interactions"
     };
   
     try {
-      const response = await fetch('http://localhost:3001/interactions/save-rating', {
+      const response = await fetch('http://localhost:5000/interactions/save-rating', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

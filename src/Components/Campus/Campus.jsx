@@ -39,7 +39,8 @@ const Interactions = () => {
       id_estudiante: 1,
       tipo_interaccion: "Clase",
       comentario: "Muy buena clase",
-      calificacion: rating
+      calificacion: rating,
+      sede: "Campus"
     };
   
     try {
@@ -64,38 +65,6 @@ const Interactions = () => {
       console.error('Error saving rating:', error);
     }
   };
-  
-
-  // const saveRating = async (rating) => {
-  //   const estudiante = {
-  //     id_estudiante: 1,
-  //     tipo_interaccion: "Clase",
-  //     comentario: "Muy buena clase",
-  //     calificacion: rating
-  //   };
-
-  //   try {
-  //     const response = await fetch('http://localhost:5000/interactions/save-rating', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(estudiante)
-  //     });
-  //     if (!response.ok) {
-  //       throw new Error('Error saving rating');
-  //     }
-  //     setRatingsHistory(prevHistory => [...prevHistory, rating]);
-  //     Swal.fire({
-  //       title: '¡Gracias por tu calificación!',
-  //       text: `Calificación seleccionada: ${rating}`,
-  //       icon: 'success',
-  //       confirmButtonText: 'Aceptar'
-  //     });
-  //   } catch (error) {
-  //     console.error('Error saving rating:', error);
-  //   }
-  // };
 
   return (
     <section className="interactions-section">
