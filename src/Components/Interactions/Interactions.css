@@ -1,3 +1,143 @@
+/* 
+body {
+  background-image: url('../Imagenes/Low\ Poly.png');
+  margin: 0; 
+  padding: 0; 
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.header-logo {
+  width: 120px;
+  margin-left: 20px;
+}
+
+.interactions-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px; 
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.interaction-section {
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  overflow-x: auto; 
+  overflow-y: hidden;
+  white-space: nowrap; 
+}
+
+.rating-button {
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px; 
+  border: none;
+  outline: none;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-button:hover {
+  background-color: transparent;
+}
+
+.rating-button img {
+  width: 80px;
+  height: auto;
+}
+
+.rating-button p {
+  margin-top: 5px;
+}
+
+.card {
+  border-radius: 10px;
+  width: 110%; 
+  max-width: 600px; 
+  margin-top: -0px;
+  margin-left: 30px;
+}
+.card h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: #0a581b;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-family: cursive;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 300px;
+  height: 410px;
+  border-radius: 5px;
+}
+
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: green;
+  color: #fff;
+  font-size: 1em;
+}
+
+.card1 {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-left: -40px;
+  
+}
+
+.card1 h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: #0a581b;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.card1 p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-family: cursive;
+} */
+
 
 body {
   background-image: url('../Imagenes/Low\ Poly.png');
@@ -165,8 +305,16 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   }
 
   .header-logo {
-    margin-left: 50px; /* Ajustar el margen izquierdo */
+    margin-left: 30px; /* Ajustar el margen izquierdo */
   }
+}
+@media screen and (min-width: 688px) {
+ 
+  .card{
+    margin-left: 65px;
+  }
+  
+
 }
 
 /* Media query para pantallas más pequeñas */
@@ -181,10 +329,10 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 /* Media query para ajustar el tamaño en pantallas más pequeñas */
 @media screen and (max-width: 768px) {
   .card1{
-   margin-left: 20px;
+   margin-left: 49px;
   }
   .card {
-    width: 95%; /* Reducir el ancho en pantallas más pequeñas */
+    width: 90%; /* Reducir el ancho en pantallas más pequeñas */
   }
 
   .card img {
@@ -206,8 +354,11 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   }
 
   .interactions-container {
-    grid-template-columns: repeat(2, 1fr); /* Cambiar a dos columnas */
+    grid-template-columns: repeat(1, 2fr); /* Cambiar a dos columnas */
     gap: 20px; /* Ajustar el espacio entre las tarjetas */
     max-width: 90%; /* Limitar el ancho del contenedor */
+  }
+  .card{
+    margin-left: 70px;
   }
 }

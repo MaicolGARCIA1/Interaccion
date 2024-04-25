@@ -98,10 +98,10 @@ const Interactions = () => {
                 <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054840410154/neutral.png?ex=662ac24b&is=662970cb&hm=35a0dc6bf3495dfc647076eedee91d35944543ea5653ad9bcd6a5f9545379a9f&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Neutral</p>
               </button>
               <button className="rating-button" onClick={() => handleInteractionClick('malo')} title="Malo">
-                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=662ac24b&is=662970cb&hm=8386b6c04af0fba5063cd91a4355cc613c3977bfb5bececf05abf0c86d21c63d&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p>Malo</p>
+                <img className='carasMover' src="https://media.discordapp.net/attachments/1101500368397029496/1232796054269722735/malo.png?ex=662ac24b&is=662970cb&hm=8386b6c04af0fba5063cd91a4355cc613c3977bfb5bececf05abf0c86d21c63d&=&format=webp&quality=lossless&width=549&height=549" alt="" /><p className='malo'>Malo</p>
               </button>
               <button className="rating-button" onClick={() => handleInteractionClick('muy_malo')} title="Muy Malo">
-                <img src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=662ac107&is=66296f87&hm=95187695002c3357267c2fa08afb9b2ec22eb8f67c8020284fc2e2fb1ce7b48d&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p>Muy Malo</p>
+                <img className='carasMove' src="https://media.discordapp.net/attachments/1101500368397029496/1232794694136758362/MUYPUTO.png?ex=662ac107&is=66296f87&hm=95187695002c3357267c2fa08afb9b2ec22eb8f67c8020284fc2e2fb1ce7b48d&=&format=webp&quality=lossless&width=549&height=549" alt="" /> <p className='muymalo'>Muy Malo</p>
               </button>
             </div>
           </div>
